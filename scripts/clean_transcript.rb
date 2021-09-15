@@ -21,7 +21,9 @@ def clean_line(line)
     gsub('…', '……').
     gsub(/(\d),(\d)/, '\1||\2').
     gsub(',', '，').
-    gsub('||', ',')
+    gsub('||', ',').
+    gsub('https：//', 'https://').
+    gsub('http：//', 'http://')
   if line[-2] != '：' &&
       line[0] != "（" &&
       # line[1] != "、" &&
